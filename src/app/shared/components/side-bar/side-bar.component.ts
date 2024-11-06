@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './side-bar.component.css'
 })
 export class SideBarComponent implements OnInit {
+
+  mainMenu: {
+    defaultOptions: Array<any>, 
+    accessLink: Array<any>
+  } = { defaultOptions: [], accessLink: [] };
+
+  customOptions: Array<any> = [];
+
   ngOnInit(): void {
     this.mainMenu.defaultOptions = [
       {
@@ -56,9 +64,8 @@ export class SideBarComponent implements OnInit {
       }
     ]
   }
-  mainMenu: {
-    defaultOptions: Array<any>, accessLink: Array<any>
-  } = { defaultOptions: [], accessLink: [] }
 
-  customOptions: Array<any> = []
+
+
+
 }
